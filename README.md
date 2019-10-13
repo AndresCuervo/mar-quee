@@ -15,6 +15,23 @@ will look like this:
 
 ![marquee example GIF with three lines of text: "marque one", "marquee twoooooooooo", and "long boiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"](https://cdn.glitch.com/628e1b12-c113-4c51-9428-4dc73627d104%2Fmar-quee-screen-recording.gif?v=1570939861370)
 
+
+# Usage
+
+Just include `<script src="mar-quee.js"></script>` **at the bottom of your &lt;body&gt;>** & you're good to go!
+
+# Customizing the element & animation
+
+Customization is available via [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*):
+
+| property | default value |
+-----------|----------------
+| `--marquee-height` | `25px` |
+| `--marquee-width` | `100px` |
+| `--marquee-animation-timing-function:` | `linear` |
+| `--marquee-animation-duration` | `3s` |
+| `--marquee-animation-iteration-count` | `infinite` |
+
 ---
 
 Heavily inspired by [`<bg-sound>`](https://github.com/feross/bg-sound)
