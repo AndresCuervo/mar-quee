@@ -1,14 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title><mar-quee> example!</title>
-        <style>body { font-family: sans-serif; }</style>
-    </head>
-    <body>
-        <mar-quee>marque one</mar-quee>
-        <mar-quee>marquee twoooooooooo</mar-quee>
-        <mar-quee>long boiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</mar-quee>
-        <script src="mar-quee.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>&lt;mar-quee&gt; example!</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #2EAFAC;
+        font-size: 1.25rem;
+      }
+      pre {
+        background-color: black;
+        overflow: auto;
+      }
+      hr {
+        border: 3px dashed black;
+        border-radius: 4px;
+      }
+      footer {
+        text-align: center;
+      }
+      #marquee-holder {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        font-size: 3rem;
+      }
+      :root {
+        --marquee-width: 350px;
+        --marquee-height: 3rem;
+      }
+      @media(min-width: 600px) {
+        body {
+          padding: 0 10%;
+        }
+      }
+    </style>
+    <link href="./prism/prism-tommorow-night.css" rel="stylesheet" />
+    <script src="./prism/prism.js" data-manual></script>
+  </head>
+  <body>
+    
+    <h1>
+      &lt;mar-quee&gt; — Bringing back the most <strike>annoying</strike> amazing HTML element!
+    </h1>
+    
+    <h2>
+      Live examples:
+    </h2>
+    
+    <div id="marquee-holder">
+      Hello <mar-quee>marquee one</mar-quee> world
+      <mar-quee>marquee twoooooooooo</mar-quee>
+      <mar-quee>long boiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</mar-quee>
+    </div>
+
+    
+    <hr/>
+    
+    <h2>
+       Usage:
+    </h2>
+    The code I used to on the page above is shown below:
+    
+    <pre><code class="language-html">
+        &lt;mar-quee&gt;marquee one&lt;/mar-quee&gt;
+        &lt;mar-quee&gt;marquee one&lt;/mar-quee&gt;
+        &lt;mar-quee&gt;marquee twoooooooooo&lt;/mar-quee&gt;
+        &lt;mar-quee&gt;long boiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii&lt;/mar-quee&gt;
+        
+        &lt;!-- just before &lt;/body&gt; --&gt;
+        &lt;script src="mar-quee.js"&gt;&lt;/script&gt;
+    </code></pre>
+    
+    & you can edit the CSS properties of the <code>&lt;mar-quee&gt;</code> elements using these CSS custom properties:
+    <pre><code class="language-css">
+    :root {
+        --marquee-width: 350px;
+        --marquee-height: 3rem;
+      }
+    </code></pre>
+    
+    You can also set each of these properties, each shown with their default values below:
+    
+    <pre><code class="language-css">
+    --marquee-animation-timing-function: linear;
+    --marquee-animation-duration: 3s;
+    --marquee-animation-iteration-count: infinite;
+    </code></pre>
+    <hr />
+    <footer>
+      <p>
+        Remix this project on Glitch! <span class="glitchButton"></span>
+      </p>
+      <p>
+        Checkout & contribute to <a href="https://github.com/cwervo/mar-quee">the project on GitHub!</a> 
+      </p>
+    </footer>
+    
+    <script src="https://button.glitch.me/button.js" style=" display: inline-block;"></script>
+    <script src="mar-quee.js"></script>
+  </body>
 </html>
