@@ -9,16 +9,20 @@ class extends HTMLElement {
         <style>
             .marquee {
                 position: relative;
+                display: inline-block;
                 overflow: hidden;
-                height: 25px;
-                width: 100px;
+                height: var(--marquee-height, 25px);
+                width: var(--marquee-width, 100px);
             }
             .marquee span {
                 position: absolute;
                 margin: 0;
-                line-height: 25px;
+                line-height: var(--marquee-height, 25px);
                 white-space: nowrap;
-                animation: marquee 3s linear infinite;
+                animation: marquee;
+                animation-timing-function: var(--marquee-animation-timing-function, linear);
+                animation-duration: var(--marquee-animation-duration, 3s);
+                animation-iteration-count: var(--marquee-animation-iteration-count, infinite);
             }
             @keyframes marquee {
                 0% { transform: translateX(100%); }
